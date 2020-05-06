@@ -48,5 +48,37 @@
     "electron": "^8.2.5",
     "electron-builder": "^22.6.0",
     "wait-on": "^5.0.0"
+  },
+  "main": "public/electron.js",
+  "homepage": "./",
+  "author": {
+    "name": "Your name",
+    "email": "your.email@domain.com",
+    "url": "https://your-website.com"
+  },
+  "build": {
+    "appId": "com.my-website.my-app",
+    "productName": "MyApp",
+    "copyright": "Copyright © 2019 ${author}",
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "win": {
+      "target": [
+        "portable",
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
   }
 }
